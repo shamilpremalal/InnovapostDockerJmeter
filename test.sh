@@ -45,5 +45,5 @@ echo "=====Step 3: Pushing Files to Git==="
 git add .
 git commit -m "Adding Latest Reports"
 git push
-shamil
+
 
