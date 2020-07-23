@@ -43,12 +43,18 @@ echo "${M_DIR}"
 
 echo "=====Step 3: Pushing Files to Git==="
 git add .
-git commit -m "Adding Latest Reports"
+sleep 2
+git commit -m "Adding Latest Reports $(date +"%d_%m_%Y_%H_%M")"
+sleep 2
 git push
+sleep 15
 
 echo "=====Step 4: Removing all Docker Containers/Images==="
 docker stop $(docker ps -aq)
+sleep 2
 docker rm $(docker ps -aq)
+sleep 2
 docker rmi $(docker images -q)
+sleep 2
 
 
