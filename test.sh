@@ -46,4 +46,9 @@ git add .
 git commit -m "Adding Latest Reports"
 git push
 
+echo "=====Step 4: Removing all Docker Containers/Images==="
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+docker rmi $(docker images -q)
+
 
