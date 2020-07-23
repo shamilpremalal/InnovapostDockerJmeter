@@ -40,3 +40,10 @@ mkdir -p ${M_DIR}
 echo "=====Step 2: Copy everything from /Reports to specific Folder==="
 cp -r ${R_DIR} ${M_DIR}
 echo "${M_DIR}"
+
+echo "=====Step 3: Pushing Files to Git==="
+git add .
+git commit -m "Adding Latest Reports"
+git push
+shamil
+
