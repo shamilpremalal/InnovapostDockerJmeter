@@ -1,11 +1,6 @@
 #!/bin/bash
 #
-# Test the JMeter Docker image using a trivial test plan.
-
-# Example for using User Defined Variables with JMeter
-# These will be substituted in JMX test script
-# See also: http://stackoverflow.com/questions/14317715/jmeter-changing-user-defined-variables-from-command-line
-
+# Test the JMeter Docker image using a test test plan.
 
 TR_DIR=Test_Reports
 TS_DIR=Test_Script
