@@ -1,3 +1,5 @@
+#!/bin/bash
+#
 # Run JMeter Docker image with options
 
 NAME="jmeter"
