@@ -1,6 +1,6 @@
 FROM alpine:3.12.0
  
-MAINTAINER Innovapost-Deloitte
+MAINTAINER IPost
  
 ARG JMETER_VERSION="5.3"
 ENV TZ=America/Montreal
