@@ -29,7 +29,7 @@ echo "See HTML test report in ${R_DIR}index.html"
 #########Entering Code to check if reports is generated#########
 
 reportExistance=${R_DIR}index.html
-if [ -f "$file" ]
+if [ -e "$file" ]
 then
 	echo "$file found, Success in Generating Report."
 else
@@ -48,7 +48,7 @@ echo "${M_DIR}"
 #########Entering Code to check if reports is generated#########
 
 reportExistance=${M_DIR}/index.html
-if [ -f "$file" ]
+if [ -e "$file" ]
 then
 	echo "$file found, Success in Retrieving Report."
 else
