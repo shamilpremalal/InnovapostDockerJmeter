@@ -26,7 +26,16 @@ cat ${TR_DIR}/result.jtl
 
 echo "==== HTML Test Report ===="
 echo "See HTML test report in ${R_DIR}index.html"
+#########Entering Code to check if reports is generated#########
 
+reportExistance=${R_DIR}index.html
+if [ -f "$file" ]
+then
+	echo "$file found, Success in Generating Report."
+else
+	echo "$file not found, Error in Generating Report."
+fi
+################################################################
 echo "=====Step 1: Create a folder with the current timestamp===="
 M_DIR=${TR_DIR}/All_Reports/Report_$(date +"%d_%m_%Y_%H_%M")
 rm -rf ${M_DIR} > /dev/null 2>&1
@@ -35,6 +44,17 @@ mkdir -p ${M_DIR}
 echo "=====Step 2: Copy everything from /Reports to specific Folder==="
 cp -r ${R_DIR} ${M_DIR}
 echo "${M_DIR}"
+
+#########Entering Code to check if reports is generated#########
+
+reportExistance=${M_DIR}/index.html
+if [ -f "$file" ]
+then
+	echo "$file found, Success in Retrieving Report."
+else
+	echo "$file not found, Error in Retrieving Report."
+fi
+################################################################
 
 echo "=====Step 3: Pushing Files to Git==="
 git add .
