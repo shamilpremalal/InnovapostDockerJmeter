@@ -26,14 +26,14 @@ cat ${TR_DIR}/result.jtl
 
 echo "==== HTML Test Report ===="
 echo "See HTML test report in ${R_DIR}index.html"
-#########Entering Code to check if reports is generated#########
 
+#########Entering Code to check if reports is generated#########
 reportExistance=${R_DIR}index.html
-if [ -e "$file" ]
+if [ -e "$reportExistance" ]
 then
-	echo "$file found, Success in Generating Report."
+	echo "$reportExistance found, Success in Generating Report."
 else
-	echo "$file not found, Error in Generating Report."
+	echo "$reportExistance not found, Error in Generating Report."
 fi
 ################################################################
 echo "=====Step 1: Create a folder with the current timestamp===="
@@ -45,14 +45,13 @@ echo "=====Step 2: Copy everything from /Reports to specific Folder==="
 cp -r ${R_DIR} ${M_DIR}
 echo "${M_DIR}"
 
-#########Entering Code to check if reports is generated#########
-
+#########Entering Code to check if reports copied properly#########
 reportExistance=${M_DIR}/index.html
-if [ -e "$file" ]
+if [ -e "$reportExistance" ]
 then
-	echo "$file found, Success in Retrieving Report."
+	echo "$reportExistance found, Success in Retrieving Report."
 else
-	echo "$file not found, Error in Retrieving Report."
+	echo "$reportExistance not found, Error in Retrieving Report."
 fi
 ################################################################
 
